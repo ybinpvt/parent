@@ -1,5 +1,5 @@
 bx:
-  ip: 127.0.0.1
+  ip: 172.17.70.161
   nacos:
     server-addr: 127.0.0.1:8848
   swagger:
@@ -16,7 +16,7 @@ spring:
     name: user-center
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://${bx.ip}:3306/user-center?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      url: jdbc:mysql://${bx.ip}:3307/user-center?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
       username: root
       password: root
       initialSize: 5
@@ -47,7 +47,7 @@ spring:
   redis:
       host: ${bx.ip}
       port: 6379
-      password:
+      password: redis
       timeout: 10s
       lettuce:
         pool:
